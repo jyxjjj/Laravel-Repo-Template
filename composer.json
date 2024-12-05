@@ -24,9 +24,9 @@
         "ext-sockets": "*",
         "ext-zlib": "*",
         "desmg/php-common": "^2.0.4",
-        "fakerphp/faker": "^1.23.1",
+        "fakerphp/faker": "^1.24.1",
         "guzzlehttp/guzzle": "^7.9.2",
-        "laravel/framework": "^11.30.0",
+        "laravel/framework": "^11.34.2",
         "nunomaduro/collision": "^8.5.0",
         "simplesoftwareio/simple-qrcode": "^4.2.0"
     },
