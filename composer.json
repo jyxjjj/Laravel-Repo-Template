@@ -6,7 +6,7 @@
         "laravel",
         "template"
     ],
-    "license": "GPL-3.0-only",
+    "license": "AGPL-3.0-only",
     "require": {
         "php": "^8.3",
         "ext-bcmath": "*",
