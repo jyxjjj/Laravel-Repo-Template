@@ -24,7 +24,7 @@ class Handler extends ExceptionHandler
         $this->renderable(function (Throwable $e) {
             switch (get_class($e)) {
                 case AppException::class:
-                    return $this->fail($e->getErrorCode(), $e->getMessage());
+                    return $this->fail($e->errorCode, $e->getMessage());
                 default:
                     ErrorCodes::log($e);
                     return $this->fail();

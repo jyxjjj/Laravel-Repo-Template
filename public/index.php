@@ -3,12 +3,12 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 
-if (PHP_MAJOR_VERSION < 8) {
+if (PHP_MAJOR_VERSION != 8 || PHP_MINOR_VERSION != 4) {
     echo "PHP Version Mismatch\n";
     exit(130);
 }
 
-define('LARAVEL_START', (new DateTime)->format('U.u'));
+define('LARAVEL_START', new DateTime()->format('U.u'));
 
 require __DIR__ . '/../vendor/autoload.php';
 

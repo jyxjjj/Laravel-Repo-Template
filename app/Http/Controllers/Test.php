@@ -1,4 +1,4 @@
-<?php /** @noinspection PhpUnusedPrivateMethodInspection,PhpUnusedParameterInspection */
+<?php
 
 namespace App\Http\Controllers;
 
@@ -15,7 +15,7 @@ class Test extends BaseController
     public function test(Request $request): Response|JsonResponse|View|string
     {
         $method = $request->query('method');
-        $methods = (new ReflectionClass($this))->getMethods(ReflectionMethod::IS_PRIVATE);
+        $methods = new ReflectionClass($this)->getMethods(ReflectionMethod::IS_PRIVATE);
         $methods = array_filter($methods, fn($v) => $v->class === $this::class);
         $methods = array_filter($methods, fn($v) => $v->name !== 'test');
         $methods = array_column($methods, 'name');
